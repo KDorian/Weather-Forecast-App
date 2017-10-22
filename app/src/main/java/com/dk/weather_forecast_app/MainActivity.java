@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TextView dateTextView;
     TextView weatherDescriptionTextView;
     TextView cityTextView;
+    ImageView weatherImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         dateTextView = (TextView) findViewById(R.id.dateTextView);
         weatherDescriptionTextView = (TextView) findViewById(R.id.weatherDescriptionTextView);
         cityTextView = (TextView) findViewById(R.id.cityTextView);
+
+        weatherImageView = (ImageView) findViewById(R.id.weatherImageView);
 
         dateTextView.setText(getCurrentDate());
 
@@ -62,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                             tempTextView.setText(temp);
                             weatherDescriptionTextView.setText(weatherDescription);
                             cityTextView.setText(city);
+
+                            int iconResourceId = getResources().getIdentifier("icon_" + weatherDescription.replace(" ", ""), "drawable", getPackageName());
+                            weatherImageView.setImageResource(iconResourceId);
 
 
                         } catch (JSONException e) {
