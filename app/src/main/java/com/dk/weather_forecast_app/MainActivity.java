@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     private String getCurrentDate ()
     {
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMM dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         String formattedDate = dateFormat.format(calendar.getTime());
 
         return formattedDate;
