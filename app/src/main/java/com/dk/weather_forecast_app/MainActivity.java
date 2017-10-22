@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         tempTextView = (TextView) findViewById(R.id.temperatureTextView);
         tempTextView.setText("30");
 
-        String url = "http://api.openweathermap.org/data/2.5/weather?q=Warszawa,pl&appid=d6ceb79f9eb5adf3bce194ec5bef2db4";
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=Warszawa,pl&appid=d6ceb79f9eb5adf3bce194ec5bef2db4&units=metric";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
